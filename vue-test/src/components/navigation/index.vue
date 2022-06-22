@@ -18,9 +18,9 @@
 		},
 	mounted(){
 			console.log(this.$router)
-		  // this.abc= this.$router.options.routes.filter(item=>Object.keys(item).includes('meta'))
+		  this.abc= this.$router.options.routes.filter(item=>Object.keys(item).includes('meta'))
 		  	// this.abc= this.$router.options.routes.splice(1)
-			 this.abc= this.$router.options.routes.slice(1)
+			 // this.abc= this.$router.options.routes.slice(1)
 	},
 
 	}

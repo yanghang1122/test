@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import router from 'vue-router'
+
 import home from '../views/home'
 import pageone from '../views/pageOne'
 import pagetwo from '../views/pageTwo'
