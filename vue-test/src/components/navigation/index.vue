@@ -1,17 +1,25 @@
 <template>
 
 	<div class="navigation">
+		<ul>
+			<router-link :to='v.path' v-for="(v,i) in abc" :key="i" tag='li' activeClass="active">{{v.meta.nm}}</router-link>
+		</ul>
 		
-		<router-link to='/home'>首页</router-link>
-		<div class="item"><router-link to='/home/pageone'>页面1</router-link></div>
-		<div class="item"><router-link to='/home/pagetwo'>页面2</router-link></div>
-		<div class="item"><router-link to='/home/pagethree'>页面3</router-link></div>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'navigation',
+		data(){
+			return{
+				abc:[]
+			}
+		},
+	mounted(){
+		  this.abc= this.$router.options.routes.filter(item=>Object.keys(item).includes('meta'))
+	},
+
 	}
 </script>
 
@@ -25,7 +33,7 @@
 		width: 80%;
 		left: 50%;
 		transform: translateX(-50%);
-		position: fixed;
+		position: relative;
 		top: 0;
 
 	}
@@ -33,5 +41,8 @@
 	.navigation >div {
 		width: 200px;
 		display: inline-block;
+	}
+	.active{
+		color: red;
 	}
 </style>
