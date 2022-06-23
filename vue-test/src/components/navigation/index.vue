@@ -1,27 +1,25 @@
 <template>
 
 	<div class="navigation">
-		<ul>
-			<router-link :to='v.path' v-for="(v,i) in abc" :key="i" tag='li' activeClass="active">{{v.meta.nm}}</router-link>
-		</ul>
-		
+		<router-link :to='v.path' v-for="(v,i) in abc" :key="i" tag='div' activeClass="active">{{v.meta.nm}}
+		</router-link>
+
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'navigation',
-		data(){
-			return{
-				abc:[]
+		data() {
+			return {
+				abc: []
 			}
 		},
-	mounted(){
-			console.log(this.$router)
-		  this.abc= this.$router.options.routes.filter(item=>Object.keys(item).includes('meta'))
-		  	// this.abc= this.$router.options.routes.splice(1)
-			 // this.abc= this.$router.options.routes.slice(1)
-	},
+		mounted() {
+			this.abc = this.$router.options.routes.filter(item => Object.keys(item).includes('meta'))
+			// this.abc= this.$router.options.routes.splice(1)
+			// this.abc= this.$router.options.routes.slice(1)
+		},
 
 	}
 </script>
@@ -33,19 +31,23 @@
 	}
 
 	.navigation {
-		width: 80%;
+		width: 100%;
 		left: 50%;
 		transform: translateX(-50%);
 		position: relative;
 		top: 0;
-
+		background-color: gainsboro;
+		display: flex;
+		padding: 20px 100px;
+		box-sizing: border-box;
 	}
 
-	.navigation >div {
-		width: 200px;
-		display: inline-block;
+	.navigation div {
+		margin-right: 50px;
+		cursor: pointer;
 	}
-	.active{
+
+	.active {
 		color: red;
 	}
 </style>

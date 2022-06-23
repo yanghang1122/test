@@ -23,6 +23,7 @@ export default new router({
 		{
 			path: "/pageOne",
 			component: pageone,
+			name:'pageone',
 			meta: {
 				nm: '页面1'
 			}

@@ -6,7 +6,10 @@
 
 <script>
 	export default{
-		name:"pageOne"
+		name:"pageOne",
+		mounted(){
+			console.log(this.$route.params)
+		}
 	}
 </script>
 
