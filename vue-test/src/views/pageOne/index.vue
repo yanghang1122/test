@@ -1,6 +1,9 @@
 <template>
 	<div class="">
 		页面1
+		
+		<router-link to='/pageOne/pageOneChildren'>去页面1</router-link> 
+		<router-view></router-view>
 	</div>
 </template>
 
@@ -9,7 +12,8 @@
 		name:"pageOne",
 		mounted(){
 			console.log(this.$route.params)
-		}
+		},
+		
 	}
 </script>
 

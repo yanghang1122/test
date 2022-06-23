@@ -1,14 +1,32 @@
 <template>
 	<div class="">
 		页面2
+		<pageTwoChildren title="爹给你传的">
+			<!-- <template slot="jiegou1">
+				爹给你传的模板1
+			</template>
+			
+			<template slot="jiegou2">
+				爹给你传的模板2
+			</template> -->
+			
+			<template scope="num">
+				{{num.num}}
+			</template>
+			
+		</pageTwoChildren>
 	</div>
 </template>
 
 <script>
+	import pageTwoChildren from './pageTwoChildren/index.vue'
 	export default{
-		name:"pageTwo"
+		name:"pageTwo",
+		components:{
+			pageTwoChildren
+		}
 	}
 </script>
 
-<style>
+<style scoped>
 </style>

@@ -16,9 +16,7 @@
 
 		<router-link :to="{name:'pageone',params:{categoryList:categoryList}}"> 跳到页面1 </router-link>
 		
-		
-		<el-cascader-panel :options="options"></el-cascader-panel>
-		
+	
 		
 	</div>
 </template>

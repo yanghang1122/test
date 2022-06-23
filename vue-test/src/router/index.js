@@ -3,6 +3,7 @@ import router from 'vue-router'
 
 import home from '../views/home'
 import pageone from '../views/pageOne'
+import pageOneChildren from '../views/pageOne/pageOneChildren'
 import pagetwo from '../views/pageTwo'
 import pagethree from '../views/pagethree'
 
@@ -23,10 +24,18 @@ export default new router({
 		{
 			path: "/pageOne",
 			component: pageone,
-			name:'pageone',
+			name: 'pageone',
 			meta: {
 				nm: '页面1'
-			}
+			},
+			children: [{
+				path: "/pageOne/pageOneChildren",
+				component: pageOneChildren,
+				name: 'pageOneChildren',
+				meta: {
+					nm: '页面1儿子'
+				},
+			}]
 		},
 		{
 			path: "/pageTwo",
