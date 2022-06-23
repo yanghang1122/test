@@ -12,10 +12,14 @@
 			</div>
 		</div>
 
-		
-		
-		<router-link :to="{name:'pageone',params:{categoryList:categoryList}}" > 跳到页面1 </router-link>
 
+
+		<router-link :to="{name:'pageone',params:{categoryList:categoryList}}"> 跳到页面1 </router-link>
+		
+		
+		<el-cascader-panel :options="options"></el-cascader-panel>
+		
+		
 	</div>
 </template>
 
@@ -37,18 +41,18 @@
 </script>
 
 <style>
-	
-	.content{
+	.content {
 		width: 20vw;
 	}
+
 	.item2 {
 		position: absolute;
 		top: 100px;
 		left: 20vw;
 		display: none;
 	}
-	
-	.item1:hover div{
+
+	.item1:hover div {
 		display: block;
 	}
 </style>
