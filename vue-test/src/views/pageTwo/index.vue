@@ -9,7 +9,7 @@
 			<template slot="jiegou2">
 				爹给你传的模板2
 			</template> -->
-			<!-- a 1-->
+			<!-- a 1aa-->
 			<template scope="num">
 				{{num.num}}
 			</template>
