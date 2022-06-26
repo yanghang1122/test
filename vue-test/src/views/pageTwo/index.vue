@@ -2,7 +2,7 @@
 	<div class="">
 		页面2
 		<pageTwoChildren title="爹给你传的">
-			<!-- <template slot="jiegou1">
+			<!-- <template>
 				爹给你传的模板1
 			</template>
 			
