@@ -3,7 +3,8 @@
 		页面1
 		
 		<router-link to='/pageOne/pageOneChildren'>去页面1</router-link> 
-		<keep-alive><router-view></router-view></keep-alive>
+		<!-- <keep-alive><router-view></router-view></keep-alive> -->
+		<router-view></router-view>
 		
 	</div>
 </template>
