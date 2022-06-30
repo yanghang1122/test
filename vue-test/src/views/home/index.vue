@@ -34,7 +34,7 @@
 		},
 
 		computed: {
-			// ...mapGetters(["categoryList"]),1
+			// ...mapGetters(["categoryList"]),111
 			...mapState(["categoryList"])
 		}
 
