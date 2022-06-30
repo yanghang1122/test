@@ -1,7 +1,7 @@
 <template>
 	<div class="">
 		页面2
-		<pageTwoChildren title="爹给你传的">
+		<pageTwoChildren title="爹给你传的" @canshu="zizhujian">
 			<!-- <template>
 				爹给你传的模板1
 			</template>
@@ -24,6 +24,11 @@
 		name:"pageTwo",
 		components:{
 			pageTwoChildren
+		},
+		methods:{
+			zizhujian(val){
+				console.log("儿子给传的"+val)
+			}
 		}
 	}
 </script>

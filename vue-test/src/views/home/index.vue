@@ -25,6 +25,8 @@
 	import {
 		mapGetters
 	} from "vuex"
+	
+	import { mapState } from "vuex"
 	export default {
 		name: "home",
 		mounted() {
@@ -32,7 +34,8 @@
 		},
 
 		computed: {
-			...mapGetters(["categoryList"])
+			// ...mapGetters(["categoryList"]),
+			...mapState(["categoryList"])
 		}
 
 	}
